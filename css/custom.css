@@ -62,7 +62,7 @@ img{
 }
 
 
-@media screen and (min-width:1000px){
+@media screen and (min-width:800px){
   #restaurants-list{
     grid-template-columns: repeat(3, 1fr);
 
