@@ -1,8 +1,8 @@
-const cacheName = 'restaurant-review-v6'; //name of our cache
+const staticCacheName = 'restaurant-review-v8'; //name of our cache
 
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(cacheName).then(cache => {
+    caches.open(staticCacheName).then(cache => {
       return cache.addAll([
         "/",
         "js/dbhelper.js",
@@ -10,7 +10,7 @@ self.addEventListener('install', event => {
         "js/restaurant_info.js",
         "css/custom.css",
         "css/styles.css",
-        "data/restaurants.json",
+        "data/restaurants-modified.json",
         "index.html",
         "restaurant.html",
         "img/1.jpg",
@@ -29,18 +29,30 @@ self.addEventListener('install', event => {
     })
   );
 });
-/* offline first
-fetch from cache then fallback to network */
+
+/* Deleting old cache */
+self.addEventListener('activate', event => {
+	event.waitUntil(
+		caches.keys().then(cacheNames => {
+				return Promise.all(
+						cacheNames.filter(cacheName => {
+								return (cacheName !== staticCacheName);
+						}).map(cacheName => caches.delete(cacheName))
+				)
+		}).catch(err => console.log(err.stack()))
+	)
+});
+
 self.addEventListener('fetch', event => {
     event.respondWith(
-      // Fetch data from cache
       caches.match(event.request).then((response) => {
-        // Check cache but fall back to network
-        return response || fetch(event.request);
+        if(response){
+          return response;
+        }
+        return fetch(event.request);
       })
     );
   });
-
 
 
   

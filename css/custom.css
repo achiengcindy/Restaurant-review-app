@@ -3,11 +3,10 @@
 }
 .wrapper{
     display: grid;
-    grid-gap: 1em;;
+    grid-gap: 1em;
 }
 img{
     max-width: 100%;
-    height: auto;
 }
 /* ====================== Restaurant Listing ====================== */
 

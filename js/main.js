@@ -168,25 +168,18 @@ createRestaurantHTML = (restaurant) => {
 
   /* The screen is 800px or more */
   const source1 = document.createElement('source');
-  source1.srcset=`${DBHelper.imageUrlForRestaurant(restaurant).large} 1x`;
+  source1.srcset=`${DBHelper.imageUrlForRestaurant(restaurant).large}`;
   source1.media="(min-width: 800px)";
   source1.sizes="100vw";
 
-   /* The screen is 601px or more */
-  const source2 = document.createElement('source');
-  source1.srcset=`${DBHelper.imageUrlForRestaurant(restaurant).medium} 2x`;
-  source2.media="(min-width: 601px)";
-  source2.sizes="100vw";
-
   /* The screen is 601px or more */
-  const source3 = document.createElement('source');
-  source1.srcset=`${DBHelper.imageUrlForRestaurant(restaurant).small} 2x`;
-  source3.media="(max-width: 600px)";
-  source3.sizes="100vw"
+  const source2 = document.createElement('source');
+  source1.srcset=`${DBHelper.imageUrlForRestaurant(restaurant).small}`;
+  source2.media="(max-width: 600px)";
+  source2.sizes="50vw"
 
   picture.append(source1);
   picture.append(source2);
-  picture.append(source3);
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
@@ -245,15 +238,15 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 
-// /* register service Worker
-// check for browser support */
-// if ('serviceWorker' in navigator) {
-//   navigator.serviceWorker
-//       .register('sw.js', {scope: '/'})
-//       .then(function(reg) {
-//           console.log(' Service worker definately  Registered sucessfully!');
-//       })
-//       .catch(function(error) {
-//           console.log(error);
-//       });
-// }
+/* register service Worker
+check for browser support */
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+      .register('sw.js', {scope: '/'})
+      .then(function(reg) {
+          console.log(' Service worker definately  Registered sucessfully!');
+      })
+      .catch(function(error) {
+          console.log(error);
+      });
+}

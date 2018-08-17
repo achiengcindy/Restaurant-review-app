@@ -1,8 +1,8 @@
 {
   "name": "restaurant-review-app",
   "version": "1.0.0",
-  "description": "Restaurant review app",
-  "main": "index.js",
+  "description": "restaurant-review",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,24 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/achiengcindy/Restaurant-review-app.git"
   },
-  "keywords": [
-    "restaurant",
-    "review"
-  ],
-  "author": "cindy",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/achiengcindy/Restaurant-review-app/issues"
   },
   "homepage": "https://github.com/achiengcindy/Restaurant-review-app#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-data": "^1.3.1",
-    "gulp-image-resize": "^0.13.0",
-    "gulp-json": "^0.1.4",
-    "grunt-mkdir": "^1.0.0",
-    "gulp-merge-json": "^1.3.1",
-    "gulp-rename": "^1.4.0",
-    "path-parse": "^1.0.6"
+    "gulp": "^3.9.1"
   }
 }
