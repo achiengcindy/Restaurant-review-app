@@ -107,6 +107,8 @@ nav h1 a {
   /* height: 50px; */
   background-color: #3397DB;
   align-items: center;
+  
+
 }
 .filter-options h2 {
   color: white;
@@ -208,7 +210,7 @@ nav h1 a {
     padding: 2px 0;
     text-align: center;
     text-transform: uppercase;
-      width: 90%;
+    width: 100%;
   }
   
   #restaurant-container, #reviews-container {

@@ -18,6 +18,19 @@ img{
     text-align: center;
     padding: 30px 15px 60px;
   }
+
+/*   hide labels but make it accesible */
+  .filter-options label{
+    text-indent: -10000px;
+  }
+  
+
+  .filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
   
  /* ====================== Restaurant Details ====================== */
 
@@ -37,7 +50,7 @@ img{
     background-color: #ccc;
   }
  /* ====================== Restaurant Details ======================  */
-@media screen and (max-width:600px){
+@media screen and (max-width:699px){
   #restaurants-list{
     grid-template-columns: repeat(1, 1fr);
   }
@@ -52,7 +65,7 @@ img{
 }
 
 
-@media screen and (min-width:601px){
+@media screen and (min-width:700px){
   #restaurants-list, .inside #maincontent{
     grid-template-columns: repeat(2, 1fr);
   }
@@ -61,7 +74,7 @@ img{
 }
 
 
-@media screen and (min-width:800px){
+@media screen and (min-width:850px){
   #restaurants-list{
     grid-template-columns: repeat(3, 1fr);
 

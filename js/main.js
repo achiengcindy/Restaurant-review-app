@@ -169,21 +169,27 @@ createRestaurantHTML = (restaurant) => {
   const picture = document.createElement('picture');
   /* The screen is 800px or more */
   const source1 = document.createElement('source');
-  source1.media = "(min-width: 800px)";
+  source1.media = "(min-width: 850px)";
   source1.srcset = `${DBHelper.imageUrlForRestaurant(restaurant).large} 1x , ${DBHelper.imageUrlForRestaurant(restaurant).extralarge} 2x`;
   source1.sizes = "100vw";
-
+   /* The screen is 401px or more */
   const source2 = document.createElement('source');
-  source2.media = "(min-width: 600px)";
+  source2.media = "(min-width: 401px)";
   source2.srcset = DBHelper.imageUrlForRestaurant(restaurant).medium;
-  source2.sizes = "100vw";
+  source2.sizes = "50vw ,100vw";
+   /* The screen is maximum 400px  */
+  const source3 = document.createElement('source');
+  source3.media = "(max-width: 400px)";
+  source3.srcset = DBHelper.imageUrlForRestaurant(restaurant).small;
+  source3.sizes = "50vw";
 
   picture.append(source1);
   picture.append(source2);
+  picture.append(source3);
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
-  image.src = `${DBHelper.imageUrlForRestaurant(restaurant).small}`;
+  image.src = `${DBHelper.imageUrlForRestaurant(restaurant).large}`;
   /* adding alt atribute to images for accesibility*/
   image.alt = restaurant.name + ' restaurant in ' + restaurant.neighborhood;;
 
