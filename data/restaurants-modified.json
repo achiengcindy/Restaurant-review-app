@@ -41,7 +41,9 @@
 				}
 			],
 			"photograph_small": "1-small.jpg",
-			"photograph_large": "1-large.jpg"
+			"photograph_medium": "1-medium.jpg",
+			"photograph_large": "1-large.jpg",
+			"photograph_extralarge": "1-extralarge.jpg"
 		},
 		{
 			"id": 2,
@@ -84,7 +86,9 @@
 				}
 			],
 			"photograph_small": "2-small.jpg",
-			"photograph_large": "2-large.jpg"
+			"photograph_medium": "2-medium.jpg",
+			"photograph_large": "2-large.jpg",
+			"photograph_extralarge": "2-extralarge.jpg"
 		},
 		{
 			"id": 3,
@@ -127,7 +131,9 @@
 				}
 			],
 			"photograph_small": "3-small.jpg",
-			"photograph_large": "3-large.jpg"
+			"photograph_medium": "3-medium.jpg",
+			"photograph_large": "3-large.jpg",
+			"photograph_extralarge": "3-extralarge.jpg"
 		},
 		{
 			"id": 4,
@@ -170,7 +176,9 @@
 				}
 			],
 			"photograph_small": "4-small.jpg",
-			"photograph_large": "4-large.jpg"
+			"photograph_medium": "4-medium.jpg",
+			"photograph_large": "4-large.jpg",
+			"photograph_extralarge": "4-extralarge.jpg"
 		},
 		{
 			"id": 5,
@@ -213,7 +221,9 @@
 				}
 			],
 			"photograph_small": "5-small.jpg",
-			"photograph_large": "5-large.jpg"
+			"photograph_medium": "5-medium.jpg",
+			"photograph_large": "5-large.jpg",
+			"photograph_extralarge": "5-extralarge.jpg"
 		},
 		{
 			"id": 6,
@@ -256,7 +266,9 @@
 				}
 			],
 			"photograph_small": "6-small.jpg",
-			"photograph_large": "6-large.jpg"
+			"photograph_medium": "6-medium.jpg",
+			"photograph_large": "6-large.jpg",
+			"photograph_extralarge": "6-extralarge.jpg"
 		},
 		{
 			"id": 7,
@@ -299,7 +311,9 @@
 				}
 			],
 			"photograph_small": "7-small.jpg",
-			"photograph_large": "7-large.jpg"
+			"photograph_medium": "7-medium.jpg",
+			"photograph_large": "7-large.jpg",
+			"photograph_extralarge": "7-extralarge.jpg"
 		},
 		{
 			"id": 8,
@@ -342,7 +356,9 @@
 				}
 			],
 			"photograph_small": "8-small.jpg",
-			"photograph_large": "8-large.jpg"
+			"photograph_medium": "8-medium.jpg",
+			"photograph_large": "8-large.jpg",
+			"photograph_extralarge": "8-extralarge.jpg"
 		},
 		{
 			"id": 9,
@@ -385,7 +401,9 @@
 				}
 			],
 			"photograph_small": "9-small.jpg",
-			"photograph_large": "9-large.jpg"
+			"photograph_medium": "9-medium.jpg",
+			"photograph_large": "9-large.jpg",
+			"photograph_extralarge": "9-extralarge.jpg"
 		},
 		{
 			"id": 10,
@@ -428,7 +446,9 @@
 				}
 			],
 			"photograph_small": "10-small.jpg",
-			"photograph_large": "10-large.jpg"
+			"photograph_medium": "10-medium.jpg",
+			"photograph_large": "10-large.jpg",
+			"photograph_extralarge": "10-extralarge.jpg"
 		}
 	]
 }

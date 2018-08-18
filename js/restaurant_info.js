@@ -86,9 +86,16 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
 
+
+
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
-  image.src = DBHelper.imageUrlForRestaurant(restaurant).original;
+  image.src = DBHelper.imageUrlForRestaurant(restaurant).medium;
+  image.srcset = `${DBHelper.imageUrlForRestaurant(restaurant).small} 400w,
+                  ${DBHelper.imageUrlForRestaurant(restaurant).medium} 600w,
+                  ${DBHelper.imageUrlForRestaurant(restaurant).large} 800w `;
+  image.sizes = "(max-width: 400px) 50vh,  (min-width: 600px) 80vw, 100vw, (min-width: 800px) 100vw";
+  image.alt = restaurant.name + ' restaurant in ' + restaurant.neighborhood;;
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;

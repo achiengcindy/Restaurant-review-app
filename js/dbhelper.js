@@ -151,8 +151,10 @@ class DBHelper {
   static imageUrlForRestaurant(restaurant) {
     return {
       small: `/images/${restaurant.photograph_small}`,
+      medium: `/images/${restaurant.photograph_medium}`,
       large: `/images/${restaurant.photograph_large}`,
-      original: `/images/${restaurant.photograph}`
+      // extra large images are for 2x display
+      extralarge: `/images/${restaurant.photograph_extralarge}`
     };
   }
 

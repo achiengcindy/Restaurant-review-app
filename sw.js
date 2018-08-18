@@ -1,4 +1,4 @@
-const staticCacheName = 'restaurant-review-v8'; //name of our cache
+const staticCacheName = 'restaurant-review-v6'; //name of our cache
 
 self.addEventListener('install', event => {
   event.waitUntil(
@@ -11,18 +11,18 @@ self.addEventListener('install', event => {
         "css/custom.css",
         "css/styles.css",
         "data/restaurants-modified.json",
-        "index.html",
-        "restaurant.html",
-        "img/1.jpg",
-        "img/2.jpg",
-        "img/3.jpg",
-        "img/4.jpg",
-        "img/5.jpg",
-        "img/6.jpg",
-        "img/7.jpg",
-        "img/8.jpg",
-        "img/9.jpg",
-        "img/10.jpg",
+         "index.html",
+        // "restaurant.html",
+        "restaurant.html?id=1",
+        "restaurant.html?id=2",
+        "restaurant.html?id=3",
+        "restaurant.html?id=4",
+        "restaurant.html?id=5",
+        "restaurant.html?id=6",
+        "restaurant.html?id=7",
+        "restaurant.html?id=8",
+        "restaurant.html?id=9",
+        "restaurant.html?id=10",
         "https://unpkg.com/leaflet@1.3.1/dist/leaflet.js",
         "https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
       ]);
@@ -36,7 +36,8 @@ self.addEventListener('activate', event => {
 		caches.keys().then(cacheNames => {
 				return Promise.all(
 						cacheNames.filter(cacheName => {
-								return (cacheName !== staticCacheName);
+              return cacheName.startsWith('restaurant-review-') && cacheName !== staticCacheName;
+								// return (cacheName !== staticCacheName);
 						}).map(cacheName => caches.delete(cacheName))
 				)
 		}).catch(err => console.log(err.stack()))
